@@ -1,0 +1,33 @@
+//Melissa Hurtado
+//Lab 4A 
+
+//This program asks the user to input width and height and prints out a solid rectangular box of the requested size using asterisks
+
+#include <iostream> 
+using namespace std; 
+
+int main() 
+{
+	int width, length; //declares width and length as integers 
+	
+	cout << "Input width: " << endl; //asks the user to input an integer as width
+	cin >> width; 
+	
+	cout << "Input length: " << endl; //asks the user to input an integer as length
+	cin>> length; 
+	
+	//prints out a line with width number of asterisks and repeats it length times 
+
+	for(int i=0; i<length;i++) 
+	{
+		for(int i=0; i<width; i++) 
+		{
+		cout << "*";
+		}
+	cout << endl; 
+	}
+
+
+return 0; 
+
+}
