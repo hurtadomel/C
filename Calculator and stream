@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std; 
+
+//Project 1B. This program reads in a txt file and performs the correct operation. 
+
+int main()
+{
+	char operation; //declares operation a character
+	int x, total; //declares x and total as integers
+	
+	cin >> total; //initialize the total. Without this, the program will give a random calculation. It tells the program where to start. 
+	
+	while(cin >> operation >> x) //as long as it is true that it can take in an operation and a number together..
+	{
+		if(operation == '+') //if the operation is +, 
+		{
+			total = total + x; //it should add x and update the total
+		}
+		
+		else //otherwise,
+		{
+		   total = total - x; //it should update the total by substracting x 
+		}
+	}
+
+cout << total << endl; //print the total on one line in the end
+
+}
