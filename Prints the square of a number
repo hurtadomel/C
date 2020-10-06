@@ -1,0 +1,27 @@
+//Melissa Hurtado
+//Lab 2 A
+
+//This program asks the user to input an integer in the range 0<n<100 and if the number is out of range, the program will keep asking to re-enter until a valid number is input. Once a valid value is obtained, print n squared. 
+
+#include <iostream> 
+using namespace std; 
+
+int main()
+{
+	int value; //declares value as an integer
+	
+	cout << "Please enter an integer: " << endl; // first tells the user to input an int
+	
+	while(true) //as long as it's true 
+	{
+		cin >> value; // take in value that user inputted 
+		if(value > 0 && value <100) // if the value is greater than 0 and less than 100,
+		{
+			break; //break from while loop and go to next instructions 
+		}
+		cout << "Please re-enter: " << endl; //if it's not greater than 0 and less than 100, please re-enter.
+	} // while loop keeps going until a number that works is chosen. 
+	
+	cout << value * value << endl; // when the number meets the parameter, print the square of the number
+
+}
