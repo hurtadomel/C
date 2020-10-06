@@ -1,0 +1,27 @@
+#include <iostream> 
+using namespace std; 
+
+//This program asks the user to input two integers and prints out the smaller of the two. 
+
+int main () 
+{
+	int x; //declares two integer variables x and y
+	int y; 
+
+	cout << "Enter two integers: " << endl; //asks the user to input two integers
+	cin >> x; //takes in x as input. 
+	cin >> y; //takes in y as input. 
+	
+	if(x<y) //if x is less than y, print x. 
+	{
+		cout << "The smaller of the two is" << x; 
+	}
+	else if(x>y) //if x is greater than y...
+	{
+		cout << "The smaller of the two is" << y; //print y.
+	}
+	
+return 0; //ends the code 
+
+}
+
