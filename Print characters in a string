@@ -1,0 +1,25 @@
+//Melissa Hurtado
+//HW E4.8 
+
+//This program reads a word and prints each character of the word on a separate line.
+
+#include <iostream> 
+#include <string>
+using namespace std; 
+
+int main()
+{
+	string word = ""; //initializes word as a string
+
+	cout << "Please enter a word: " << endl; //asks the user to input a word
+	cin >> word; //takes in word as input
+	
+	for(int i =0; i < word.length(); i++) //uses a for loop to iterate through each character in the word 
+	{
+		string x = word.substr(i,1); //new string will be a substring of the word and will only contain one letter.  
+		cout << x << endl;  // prints one character to the screen
+	}
+	
+	
+return 0; 
+}
