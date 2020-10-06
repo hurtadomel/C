@@ -1,0 +1,50 @@
+//Melissa Hurtado
+//Lab 2C 
+
+//This program creates an array of 10 integers, and provides the user with an interface to edit any of its elements. 
+
+#include <iostream> 
+using namespace std; 
+
+int main() 
+{
+	int myData[10]; //creates an array of 10 integers 
+	int i, v; 
+	
+	for(int i = 0; i<10; i++) //iterates through each value in the array
+	{
+	   myData[i] = 1; //makes each value =1, one at a time
+	}
+	
+	do
+	{
+		for(i=0; i<10;i++) //iterates through each value in the array
+		{
+			cout << myData[i] << " "; //prints each value with a space in between
+		}
+		cout << endl; //prints two empty lines
+		cout << endl; 
+		
+		cout << "input index: " ; //asks the user to input an index 
+		cin>>i; //takes it in as input
+		cout << "input value: "; //asks the user to input a value
+		cin >> v; //takes it in as input 
+		
+		if(i>=0 && i <10) //as long as it's within 0 and 10, excluding 10..
+		{
+			myData[i] = v; //make whichever index was specified = the value entered as v
+		}
+		else
+		{
+		  cout << "Index out of range. Exit."; //otherwise, print that it is out of range and exit the loop
+		  break; 
+		}
+		cout << endl; 
+		
+	}while(true); //do this until as long as it meets the conditions
+	
+	
+
+}
+
+
