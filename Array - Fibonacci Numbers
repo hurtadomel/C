@@ -1,0 +1,27 @@
+//Melissa Hurtado
+//Lab 2D
+
+//This program uses an array of ints to compute and print all Fibonacci numbers from F(0) to F(59).
+
+#include <iostream> 
+using namespace std; 
+
+int main()
+{
+	int fib[60]; //creates an array of integers that holds 60 values (0-59)
+		
+	fib[0] = 0; //first two terms are given
+	fib[1] = 1; 
+	
+	cout << fib[0] << endl; //prints the first two terms
+	cout << fib[1] << endl; 
+
+	for(int i =2; i<60; i++) //iterates through the array in order to compute the next values. Since the values in 0 and 1 are given, we start at 2. 
+	{
+		fib[i] = fib[i-1] + fib[i-2]; //equation to compute the rest of the values
+		cout << fib[i] << endl; //prints them on a new line each
+	}
+
+return 0; 
+}
+
