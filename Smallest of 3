@@ -1,0 +1,34 @@
+#include <iostream> 
+using namespace std; 
+
+//This program asks the user to input 3 integers and prints out the smallest of the 3. 
+
+int main() 
+{
+		int x, y, z; //declares x, y, and z as integers. 
+		
+		cout << "Enter the first number: " << endl; //asks the user to input 1st #
+		cin >> x; //takes integer as input
+		
+		cout << "Enter the second number: " << endl; //asks the user to input 2nd #
+		cin >> y; //takes integer as input
+		
+		cout << "Enter the third number: " << endl; //asks the user to input 3rd #
+		cin >> z; //takes integer as input
+		
+		if(x<y && x<z) //if x is less than y and less than z
+		{
+			cout << "The smaller of the three is" << x << endl; //print x
+		}
+		else if(y<x && y<z) //if y is less than x and less than z
+		{
+			cout << "The smaller of the three is" << y << endl; //print y
+		}
+		else //otherwise, print out z
+		{
+			cout << "The smaller of the three is" << z << endl; 
+		}
+		
+return 0; 
+
+}
