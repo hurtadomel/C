@@ -1,0 +1,26 @@
+//Melissa Hurtado
+//Lab 2B
+
+// This program asks asks the user to input two integers L and U (representing the lower and upper limits of the interval), and print out all integers in the range L ≤ i < U separated by spaces.
+
+#include <iostream>
+using namespace std; 
+
+int main()
+{
+ int L, U; //declares L and U integers. 
+ 
+ cout << "Please enter L: " << endl; //asks the user to input the lower bound
+ cin>> L; 
+ 
+ cout << "Please enter U: " << endl; //asks the user to input the upper bound
+ cin >> U; 
+ 
+ for(int i = L; i<U; i++) //starts at lower bound and prints each int until it gets to the upper bound. 
+ {
+ 	cout << i << " "; //prints each number on the same line, separated by a space.
+ }
+
+return 0; 
+
+}
