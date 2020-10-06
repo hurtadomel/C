@@ -1,0 +1,30 @@
+#include <iostream> 
+using namespace std; 
+/* Project 1C. This program reads in numbers and characters from a txt file and correctly calculates the total of each line */
+
+int main()
+{
+	int x, total; //declares x and total as integers.
+	char operation; //declares operation as a character. 
+	
+	cin >> total; //takes in first integer as total and it will update it as it goes. This way the computer doesn't give us a random total. 
+	
+	while(cin >> operation >> x) //takes in an operation and an integer at the same time. 
+	{
+		if(operation == '+')//if the operation is a plus sign,
+		{
+			total = total + x; //it adds x and updates the total. 
+		}
+		else if(operation == '-') //if the operation is a minus sign,
+		{
+			total = total - x; //it subtracts x and updates the total
+		}
+		else if(operation == ';')
+		{
+		 cout << total << endl; //prints the total when it reaches the semicolon
+		total = x; //updates the total to the next number. Without this, it has no way to know to start at the next number. The total is what always needs to be updated. 
+		}
+	}
+	cout << total << endl; //prints each total on a new line. 
+
+}
