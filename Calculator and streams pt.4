@@ -1,0 +1,61 @@
+//Melissa Hurtado
+//Project 1D
+
+/* This program updates the calculator to be able to compute squares in the correct order once a file is redirected into it. */
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	char operation; 
+	int x;
+	int total = 0; //initializes the total 
+
+	cin >> x; //takes in the first number as total, then we can update total as we go
+
+	
+	while(cin >> operation) //will take in an operation as input
+	{ 
+
+		if(operation == '+') 
+		{
+			total += x; //if the operation is addition, add x to the total and update the total
+			cin >> x; //then take in the next number as input 
+		} 
+
+		else if(operation == '^') //if the operation is squaring
+		{
+				if(x<0) //consider negative numbers
+				{
+					x =  x * x; //makes sure to first square the number and then correct the sign
+					x = x * -1;
+				}
+				else
+				{
+					x = x * x; //if it's positive, it only squares the number
+				}	
+		}
+
+		else if(operation == '-') 
+		{
+			total += x; // if the operation is subtraction, add x to the total 
+			cin >> x; //take in number as input 
+			x = x * -1; //make number negative 
+		} 
+
+		else if(operation == ';') 
+		{
+			total += x; 
+			cout << total << endl; //prints after every semicolon
+			total = 0;
+			cin >> x; 
+		}
+	}
+
+return 0;
+
+}
+
+
