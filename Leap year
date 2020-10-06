@@ -1,0 +1,32 @@
+#include <iostream> 
+using namespace std;
+
+//This program asks the user to input an integer year. If the input is a leap year, it should print "leap year" otherwise, print "common year." 
+
+int main () 
+{
+	int year; //declares year as an integer 
+	
+	cout <<  "Enter year: " << endl; 
+	cin >> year; 
+	
+	if(year%4 != 0) //condition = year is not divisible by 4
+	{
+		cout << "common year" << endl; //if it meets this condition, it is a common year
+	}
+	else if(year%100 != 0) //condition = year is not divisible by 100
+	{
+		cout << "leap year" << endl; //if it meets this condition, it is a leap year
+	}
+	else if(year%400 != 0) //condition = year is not divisible by 400
+	{
+		cout << "common year" << endl; //if it meets this condition, it is a common year
+	}
+	else 
+	{
+		cout << "leap year" << endl; //otherwise, it is a leap year
+	}
+
+return 0;
+
+}
