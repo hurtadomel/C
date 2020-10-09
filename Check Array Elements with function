@@ -1,0 +1,56 @@
+//Melissa Hurtado
+
+//This program uses a function to check whether two arrays have the same elements in the same order
+
+#include <iostream> 
+using namespace std; 
+
+
+bool equals(int a[], int a_size, int b[], int b_size)
+{
+	bool tmp = false; // bool variable that holds whether it's true or false; for arrays, instead of returning true or false, we want to return a variable; 
+	
+		if(a_size == b_size) //if they're the same size, check to see if the elements in both match
+		{
+			for(int i = 0; i < a_size; i++)
+			{
+				if(a[i] == b[i]) //if each element matches in both arrays...
+				{
+					tmp = true; //make the boolean variable = true; 
+				}
+				else
+				{
+					tmp = false; //otherwise, variable = false and we should break out of the loop 
+					break;
+				}
+			}
+		}
+		else
+		{
+			return false; 
+		}
+		return tmp;
+
+}
+
+int main()
+{
+	//creates two arrays to test 
+	const int valuesSIZE = 5; 
+	int values[valuesSIZE] = {2, 4,6,8,10}; 
+
+	const int values_2SIZE = 5; 
+	int values_2[values_2SIZE] = {1,2,3,4,5}; 
+	
+	//depending on whether it's true or false, it should print the result 
+	if(equals(values, valuesSIZE, values_2, values_2SIZE)) 
+	{
+		cout << "true" << endl; 
+	}
+	else
+	{
+		cout << "false" << endl; 
+	}
+	
+return 0; 
+}
